@@ -1,0 +1,15 @@
+# Bun configuration file
+# https://bun.sh/docs/cli/bunfig
+
+[install]
+# Use production mode by default
+production = false
+
+# Auto-install peer dependencies
+peer = true
+
+# Lockfile configuration
+lockfile = "bun.lockb"
+
+# Registry configuration
+registry = "https://registry.npmjs.org/"

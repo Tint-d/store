@@ -34,6 +34,14 @@ yarn-error.log
 testem.log
 /typings
 
+# Package manager lockfiles (using Bun)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Bun
+# Note: bun.lockb should be committed (it's a binary lockfile)
+
 # System Files
 .DS_Store
 Thumbs.db

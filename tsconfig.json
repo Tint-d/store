@@ -32,6 +32,24 @@
     },
     {
       "path": "./libs/shared/test-utils"
+    },
+    {
+      "path": "./apps/store-e2e"
+    },
+    {
+      "path": "./apps/store"
+    },
+    {
+      "path": "./apps/products-e2e"
+    },
+    {
+      "path": "./apps/products"
+    },
+    {
+      "path": "./apps/checkout-e2e"
+    },
+    {
+      "path": "./apps/checkout"
     }
   ]
 }

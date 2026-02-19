@@ -35,33 +35,33 @@ This repository demonstrates a production-ready React monorepo with:
 git clone <your-fork-url>
 cd <your-repository-name>
 
-# Install dependencies
-npx install
+# Install dependencies (using Bun)
+bun install
 
 # Serve the React shop application (this will simultaneously serve the API backend)
-npx nx serve shop
+bunx nx serve shop
 
 # ...or you can serve the API separately
-npx nx serve api
+bunx nx serve api
 
 # Build all projects
-npx nx run-many -t build
+bunx nx run-many -t build
 
 # Run tests
-npx nx run-many -t test
+bunx nx run-many -t test
 
 # Lint all projects
-npx nx run-many -t lint
+bunx nx run-many -t lint
 
 # Run e2e tests
-npx nx e2e shop-e2e
+bunx nx e2e shop-e2e
 
 # Run tasks in parallel
 
-npx nx run-many -t lint test build e2e --parallel=3
+bunx nx run-many -t lint test build e2e --parallel=3
 
 # Visualize the project graph
-npx nx graph
+bunx nx graph
 ```
 
 ## ⭐ Featured Nx Capabilities
@@ -83,10 +83,10 @@ Enforces architectural constraints using tags. Each project has specific depende
 
 ```bash
 # See the current project graph and boundaries
-npx nx graph
+bunx nx graph
 
 # View a specific project's details
-npx nx show project shop --web
+bunx nx show project shop --web
 ```
 
 [Learn more about module boundaries →](https://nx.dev/features/enforce-module-boundaries)
@@ -97,10 +97,10 @@ End-to-end testing with Playwright is pre-configured:
 
 ```bash
 # Run e2e tests
-npx nx e2e shop-e2e
+bunx nx e2e shop-e2e
 
 # Run e2e tests in CI mode
-npx nx e2e-ci shop-e2e
+bunx nx e2e-ci shop-e2e
 ```
 
 [Learn more about E2E testing →](https://nx.dev/technologies/test-tools/playwright/introduction#e2e-testing)
@@ -111,10 +111,10 @@ Fast unit testing with Vitest for React libraries:
 
 ```bash
 # Test a specific library
-npx nx test shop-data
+bunx nx test shop-data
 
 # Test all projects
-npx nx run-many -t test
+bunx nx run-many -t test
 ```
 
 [Learn more about Vite testing →](https://nx.dev/recipes/vite)
@@ -125,7 +125,7 @@ The CI pipeline includes `nx fix-ci` which automatically identifies and suggests
 
 ```bash
 # In CI, this command provides automated fixes
-npx nx fix-ci
+bunx nx fix-ci
 ```
 
 This feature helps maintain a healthy CI pipeline by automatically detecting and suggesting solutions for:
@@ -176,25 +176,25 @@ This repository uses tags to enforce module boundaries:
 
 ```bash
 # Project exploration
-npx nx graph                                    # Interactive dependency graph
-npx nx list                                     # List installed plugins
-npx nx show project shop --web                 # View project details
+bunx nx graph                                    # Interactive dependency graph
+bunx nx list                                     # List installed plugins
+bunx nx show project shop --web                 # View project details
 
 # Development
-npx nx serve shop                              # Serve React app
-npx nx serve api                               # Serve backend API
-npx nx build shop                              # Build React app
-npx nx test shop-data                          # Test a specific library
-npx nx lint shop-feature-products              # Lint a specific library
+bunx nx serve shop                              # Serve React app
+bunx nx serve api                               # Serve backend API
+bunx nx build shop                              # Build React app
+bunx nx test shop-data                          # Test a specific library
+bunx nx lint shop-feature-products              # Lint a specific library
 
 # Running multiple tasks
-npx nx run-many -t build                       # Build all projects
-npx nx run-many -t test --parallel=3          # Test in parallel
-npx nx run-many -t lint test build            # Run multiple targets
+bunx nx run-many -t build                       # Build all projects
+bunx nx run-many -t test --parallel=3          # Test in parallel
+bunx nx run-many -t lint test build            # Run multiple targets
 
 # Affected commands (great for CI)
-npx nx affected -t build                       # Build only affected projects
-npx nx affected -t test                        # Test only affected projects
+bunx nx affected -t build                       # Build only affected projects
+bunx nx affected -t test                        # Test only affected projects
 ```
 
 ## 🎯 Adding New Features
@@ -202,28 +202,28 @@ npx nx affected -t test                        # Test only affected projects
 ### Generate a new React application:
 
 ```bash
-npx nx g @nx/react:app my-app
+bunx nx g @nx/react:app my-app
 ```
 
 ### Generate a new React library:
 
 ```bash
-npx nx g @nx/react:lib my-lib
+bunx nx g @nx/react:lib my-lib
 ```
 
 ### Generate a new React component:
 
 ```bash
-npx nx g @nx/react:component my-component --project=my-lib
+bunx nx g @nx/react:component my-component --project=my-lib
 ```
 
 ### Generate a new API library:
 
 ```bash
-npx nx g @nx/node:lib my-api-lib
+bunx nx g @nx/node:lib my-api-lib
 ```
 
-You can use `npx nx list` to see all available plugins and `npx nx list <plugin-name>` to see all generators for a specific plugin.
+You can use `bunx nx list` to see all available plugins and `bunx nx list <plugin-name>` to see all generators for a specific plugin.
 
 ## Nx Cloud
 
