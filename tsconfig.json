@@ -4,9 +4,6 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/api"
-    },
-    {
       "path": "./apps/shop-e2e"
     },
     {
@@ -50,6 +47,12 @@
     },
     {
       "path": "./apps/checkout"
+    },
+    {
+      "path": "./libs/shared/api"
+    },
+    {
+      "path": "./apps/backend"
     }
   ]
 }

@@ -1,0 +1,62 @@
+{
+  "name": "@org/api",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@org/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./standardized/format-query": {
+      "@org/source": "./src/standardized/format-query/index.ts",
+      "types": "./dist/standardized/format-query/index.d.ts",
+      "import": "./dist/standardized/format-query/index.js",
+      "default": "./dist/standardized/format-query/index.js"
+    },
+    "./standardized/query-builder": {
+      "@org/source": "./src/standardized/query-builder/index.ts",
+      "types": "./dist/standardized/query-builder/index.d.ts",
+      "import": "./dist/standardized/query-builder/index.js",
+      "default": "./dist/standardized/query-builder/index.js"
+    },
+    "./standardized/format-response": {
+      "@org/source": "./src/standardized/format-response/format-response.ts",
+      "types": "./dist/standardized/format-response/format-response.d.ts",
+      "import": "./dist/standardized/format-response/format-response.js",
+      "default": "./dist/standardized/format-response/format-response.js"
+    },
+    "./standardized/validation-pipe": {
+      "@org/source": "./src/standardized/validation-pipe/index.ts",
+      "types": "./dist/standardized/validation-pipe/index.d.ts",
+      "import": "./dist/standardized/validation-pipe/index.js",
+      "default": "./dist/standardized/validation-pipe/index.js"
+    }
+  },
+  "nx": {
+    "targets": {
+      "test": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "libs/shared/api/jest.config.cts"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@nestjs/common": "^11.0.1",
+    "class-validator": "^0.14.0",
+    "class-transformer": "^0.5.1",
+    "mongoose": "^9.2.1",
+    "rxjs": "^7.8.1"
+  }
+}
